@@ -1,6 +1,6 @@
 # Sales Analytics Dashboard.
 
-Demo site can be found [here.](https://github.com/facebook/create-react-app).
+Demo site can be found [here.](https://sales-analytics-dashboard.vercel.app/).
 
 ## How to run
 

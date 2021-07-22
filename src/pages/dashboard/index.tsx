@@ -166,6 +166,7 @@ const OverviewContainer = styled.section`
 
   .products-followers__card {
     flex: 0 0 48%;
+    justify-content: center;
   }
 
   .products-card {
@@ -422,22 +423,26 @@ const Dashboard = () => {
         </div>
 
         <div className="products-followers justify-between">
-          <div className="flex justify-between products-followers__card products-card">
+          <div className="flex products-followers__card products-card">
             <div className="products-followers__icon-box">
               <FaShoppingBag />
             </div>
-            <div>
+            <div className="ml-4">
               <p className="font-bold">218</p>
-              <p className="products-followers__p-text">products</p>
+              <p className="products-followers__p-text sub-text font-bold">
+                products
+              </p>
             </div>
           </div>
-          <div className="flex justify-between products-followers__card followers_card">
+          <div className="flex products-followers__card followers_card">
             <div className="products-followers__icon-box">
               <BsPeopleFill />
             </div>
-            <div>
+            <div className="ml-4">
               <p className="font-bold">2580</p>
-              <p className="products-followers__p-text">Followers</p>
+              <p className="products-followers__p-text sub-text font-bold">
+                Followers
+              </p>
             </div>
           </div>
         </div>

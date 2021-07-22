@@ -9,8 +9,6 @@ const Dashboard = lazy(() => import("../pages/dashboard"));
 const App = () => {
   const { path } = useRouteMatch();
 
-  console.log(path, "hello");
-
   return (
     <Layout>
       <Suspense fallback={<Loading />}>

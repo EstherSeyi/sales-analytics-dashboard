@@ -1,4 +1,7 @@
 import { ResponsiveBar } from "@nivo/bar";
+import isBefore from "date-fns/isBefore";
+import getYear from "date-fns/getYear";
+import getMonth from "date-fns/getMonth";
 
 const data = [
   {
@@ -52,6 +55,9 @@ const data = [
 ];
 
 const IandEChart = () => {
+  const thisYear = getYear(new Date());
+  const thisMonth = getMonth(new Date());
+
   return (
     <>
       <ResponsiveBar
@@ -63,7 +69,16 @@ const IandEChart = () => {
         groupMode="grouped"
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
-        colors="#97c2fe"
+        colors={({ index }) => {
+          return index === thisMonth
+            ? "#3579e2"
+            : isBefore(
+                new Date(thisYear, index, 1),
+                new Date(thisYear, thisMonth, 1)
+              )
+            ? "#97c2fe"
+            : "#e2e9fb";
+        }}
         enableGridY={false}
         enableLabel={false}
         borderRadius={10}
